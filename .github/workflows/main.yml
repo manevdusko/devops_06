@@ -30,6 +30,5 @@ jobs:
     - name: Build & Push Image
       run: |
         echo "${{ secrets.DOCKERPW }}" | docker login -u "manevdushko" --password-stdin
-        docker image build -t devops/flaskapp:v1 .
-        docker tag devops1.0 manevdushko/devops:version1.0
+        docker image build -t manevdushko/devops/flaskapp:v1 .
         docker push manevdushko/devops:v1
